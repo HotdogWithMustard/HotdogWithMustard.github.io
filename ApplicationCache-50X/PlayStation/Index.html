@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" manifest="./en-us/">
+	<head>
+		<script>
+			var RegExPattern = /^https?:\/\/.+/i;
+			
+			window.addEventListener('load', function()
+			{
+				var Address = (RegExPattern.test(localStorage['Address']) ? localStorage['Address'] : prompt('Please enter the address of where you want this page to redirect you to:', 'https://hotdogwithmustard.github.io/'));
+				
+				if (RegExPattern.test(Address))
+				{
+					if (!localStorage['Address'])
+					{
+						localStorage['Address'] = Address;
+					}
+					
+					window.location.replace(Address);
+				}
+				else
+				{
+					window.location.reload();
+				}
+			});
+		</script>
+	</head>
+</html>

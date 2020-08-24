@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" manifest="Cache.appcache">
+	<head>
+		<script>
+			window.addEventListener('load', function()
+			{
+				var Version = (localStorage['Version'] || (navigator.userAgent.match(/PlayStation 4 (\d+\.\d+)/) || [ '', '' ])[1]);
+				
+				if (Version)
+				{
+					var Interval = setInterval(function()
+					{
+						if ([ window.applicationCache.UNCACHED, window.applicationCache.CHECKING, window.applicationCache.DOWNLOADING ].indexOf(window.applicationCache.status) != -1)
+						{
+							return;
+						}
+						
+						clearInterval(Interval);
+						
+						if ([ '5.05', '5.07' ].indexOf(Version) != -1)
+						{
+							window.location.replace('https://hotdogwithmustard.github.io/ApplicationCache-50X/Index.html');
+						}
+						else
+						{
+							document.write('ERROR: Your console must be running 5.05 or 5.07!');
+						}
+					}, 10);
+					
+					localStorage['Version'] = Version;
+				}
+				else
+				{
+					window.location.replace('https://github.com/HotdogWithMustard/');
+				}
+			});
+		</script>
+	</head>
+</html>

@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# 08-24-2020 06:59:59
+
+Cache.appcache
+Index.html
+Exploit.js
+Payloads/App2USB.bin
+Payloads/Backup.bin
+Payloads/Cache%20Backup.bin
+Payloads/Cache%20Restore.bin
+Payloads/Cex2SemiDex.bin
+Payloads/Disable%20Updates.bin
+Payloads/Dumper.bin
+Payloads/Enable%20Updates.bin
+Payloads/FTP.bin
+Payloads/HEN.bin
+Payloads/History%20Block.bin
+Payloads/Linux%20Gentoo.bin
+Payloads/OrbisAFR.bin
+Payloads/ReactPSPlus.bin
+Payloads/RIF-Renamer.bin
+Payloads/WebRTE.bin
